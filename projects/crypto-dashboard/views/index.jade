@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1= title
+  .card.mb-4.rounded-3.shadow-sm
+  .card-header.py-3
+    h4.my-0.fw-normal 
+      .form-check.form-check-inline
+        input#currencyRadio1.form-check-input(type='radio' name='currencyRadioOptions' value='btc' checked)
+        label.form-check-label.text-primary(for='currencyRadio1') BTC
+      .form-check.form-check-inline
+        input#currencyRadio2.form-check-input(type='radio' name='currencyRadioOptions' value='eth')
+        label.form-check-label.text-secondary(for='currencyRadio2') ETH
+  .card-body
+    h1 $
+      span#currentPrice.display-1 0.00
+    ul.list-unstyled.mt-3.mb-4
+      li 
+        span.text-muted.fw-light last updated: 
+        span#lastUpdateTs.text-muted
+      li 
+        span.text-muted.fw-light change in last 
+        input#changeMinute.form-control(type='number' style="width:60px;display:inline-block" value="1")
+        span.text-muted.fw-light  minutes: 
+        span#priceChangePct
+        span %
+
+  script(src="/javascripts/main.js") 
