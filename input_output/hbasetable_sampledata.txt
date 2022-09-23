@@ -1,0 +1,35 @@
+$ scan 'cryptoprice', {'LIMIT' => 10}
+
+hbase(main):003:0* scan 'cryptoprice', {'LIMIT' => 10}
+ROW                                      COLUMN+CELL                                                                                                          
+ btc_2022-09-23T17:16:47.818             column=price:currency, timestamp=1663953498565, value=btc                                                            
+ btc_2022-09-23T17:16:47.818             column=price:datetime, timestamp=1663953498565, value=2022-09-23T17:16:47.818                                        
+ btc_2022-09-23T17:16:47.818             column=price:price, timestamp=1663953498565, value=@\xD2d\xD6ffff                                                    
+ btc_2022-09-23T17:16:48.789             column=price:currency, timestamp=1663953498565, value=btc                                                            
+ btc_2022-09-23T17:16:48.789             column=price:datetime, timestamp=1663953498565, value=2022-09-23T17:16:48.789                                        
+ btc_2022-09-23T17:16:48.789             column=price:price, timestamp=1663953498565, value=@\xD2eXQ\xEB\x85\x1F                                              
+ btc_2022-09-23T17:16:48.790             column=price:currency, timestamp=1663953498565, value=btc                                                            
+ btc_2022-09-23T17:16:48.790             column=price:datetime, timestamp=1663953498565, value=2022-09-23T17:16:48.790                                        
+ btc_2022-09-23T17:16:48.790             column=price:price, timestamp=1663953498565, value=@\xD2eZ\xE1G\xAE\x14                                              
+ btc_2022-09-23T17:16:48.791             column=price:currency, timestamp=1663953498565, value=btc                                                            
+ btc_2022-09-23T17:16:48.791             column=price:datetime, timestamp=1663953498565, value=2022-09-23T17:16:48.791                                        
+ btc_2022-09-23T17:16:48.791             column=price:price, timestamp=1663953498565, value=@\xD2eZ=p\xA3\xD7                                                 
+ btc_2022-09-23T17:16:48.792             column=price:currency, timestamp=1663953498565, value=btc                                                            
+ btc_2022-09-23T17:16:48.792             column=price:datetime, timestamp=1663953498565, value=2022-09-23T17:16:48.792                                        
+ btc_2022-09-23T17:16:48.792             column=price:price, timestamp=1663953498565, value=@\xD2er\x8F\x5C(\xF6                                              
+ btc_2022-09-23T17:16:48.793             column=price:currency, timestamp=1663953498565, value=btc                                                            
+ btc_2022-09-23T17:16:48.793             column=price:datetime, timestamp=1663953498565, value=2022-09-23T17:16:48.793                                        
+ btc_2022-09-23T17:16:48.793             column=price:price, timestamp=1663953498565, value=@\xD2e\xF2\x8F\x5C(\xF6                                           
+ btc_2022-09-23T17:16:48.807             column=price:currency, timestamp=1663953498565, value=btc                                                            
+ btc_2022-09-23T17:16:48.807             column=price:datetime, timestamp=1663953498565, value=2022-09-23T17:16:48.807                                        
+ btc_2022-09-23T17:16:48.807             column=price:price, timestamp=1663953498565, value=@\xD2f'\xAE\x14z\xE1                                              
+ btc_2022-09-23T17:16:48.814             column=price:currency, timestamp=1663953498565, value=btc                                                            
+ btc_2022-09-23T17:16:48.814             column=price:datetime, timestamp=1663953498565, value=2022-09-23T17:16:48.814                                        
+ btc_2022-09-23T17:16:48.814             column=price:price, timestamp=1663953498565, value=@\xD2e\xF1\xEB\x85\x1E\xB8                                        
+ btc_2022-09-23T17:16:48.816             column=price:currency, timestamp=1663953498565, value=btc                                                            
+ btc_2022-09-23T17:16:48.816             column=price:datetime, timestamp=1663953498565, value=2022-09-23T17:16:48.816                                        
+ btc_2022-09-23T17:16:48.816             column=price:price, timestamp=1663953498565, value=@\xD2eu\xC2\x8F\x5C)                                              
+ btc_2022-09-23T17:16:48.818             column=price:currency, timestamp=1663953498565, value=btc                                                            
+ btc_2022-09-23T17:16:48.818             column=price:datetime, timestamp=1663953498565, value=2022-09-23T17:16:48.818                                        
+ btc_2022-09-23T17:16:48.818             column=price:price, timestamp=1663953498565, value=@\xD2f?\x5C(\xF5\xC3                                              
+10 row(s) in 0.4840 seconds
