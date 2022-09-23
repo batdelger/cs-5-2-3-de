@@ -33,7 +33,6 @@ public class Main
 {
 
 	private static final String TABLE_NAME = "cryptoprice";
-    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
 	    
 	public static void main(String[] args) throws Exception
 	{
@@ -95,29 +94,16 @@ public class Main
 
         @Override
         public Put call(String[] data) {
-            //composite rowkey with deviceId and time
         	String datetime = data[0];
         	String currency = data[1];
         	Double price = Double.valueOf(data[2]);
         	
             Put put = new Put(Bytes.toBytes(data[1] + "_" + data[0]));
-//            put.addColumn(Bytes.toBytes("crypto"), Bytes.toBytes("datetime"), Bytes.toBytes(getFormattedDateTime(datetime)));
             put.addColumn(Bytes.toBytes("price"), Bytes.toBytes("datetime"), Bytes.toBytes(datetime));
             put.addColumn(Bytes.toBytes("price"), Bytes.toBytes("currency"), Bytes.toBytes(currency));
             put.addColumn(Bytes.toBytes("price"), Bytes.toBytes("price"), Bytes.toBytes(price));
             
             return put;
         }
-    }
-
-    /**
-     * getFormattedDateTime method
-     *
-     * @param value long value
-     * @return String of formatted local date time
-     */
-    private static String getFormattedDateTime(String value) {
-        Instant instant = Instant.ofEpochSecond(Long.parseLong(value));
-        return (LocalDateTime.ofInstant(instant, TimeZone.getDefault().toZoneId()).format(formatter));
     }
 }

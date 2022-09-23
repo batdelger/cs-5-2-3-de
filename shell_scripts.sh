@@ -1,5 +1,5 @@
 # run StreamReceiver
-$ java -jar /home/botgonbaatar/eclipse-workspace/KafkaProducer/target/KafkaProducer-0.0.1-SNAPSHOT.jar \
+$ java -jar <path_to_jar>/KafkaProducer-0.0.1-SNAPSHOT.jar \
 edu.miu.cs523.KafkaProducer.StreamReceiverApplication
 
 # check kafka topic
@@ -15,7 +15,7 @@ count 'cryptoprice'
 
 
 # run SparkStreaming+Kafka to HBase (local)
-$ java -jar /home/botgonbaatar/eclipse-workspace/KafkaConsumerHBase/target/KafkaConsumerHBase-0.0.1-SNAPSHOT-jar-with-dependencies.jar \
+$ java -jar <path_to_jar>/KafkaConsumerHBase-0.0.1-SNAPSHOT-jar-with-dependencies.jar \
 edu.miu.cs523.KafkaConsumerHBase.Main
 
 
@@ -28,7 +28,7 @@ spark-submit \
 --class edu.miu.cs523.Main \
 --master yarn \
 --deploy-mode client \
-/hostdir/KafkaToHBase-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+<path_to_jar>/KafkaToHBase-0.0.1-SNAPSHOT-jar-with-dependencies.jar
 
 # create hive Table
 $ hive
